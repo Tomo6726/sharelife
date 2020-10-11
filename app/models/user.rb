@@ -3,7 +3,10 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
+  
+  has_many :posts, dependent: :destroy
+  has_many :likes
+  has_many :comments
   validates :name, presence: true, length: { maximum: 50 }
 
   def update_without_current_password(params, *options)
