@@ -9,7 +9,10 @@
   }
   &__mainLogo {
     background-repeat: no-repeat; 
-    background-image: image-url("logo.png");
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
   }
   &-nav {
     & > li {
